@@ -1,4 +1,5 @@
 /** =========================GLOBAL============================== */
+/* ============================== MOBILE 👇 ========================== */
 
 body {
     background: #fff;
@@ -12,6 +13,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
 a {
@@ -41,7 +43,7 @@ p {
 
 .container {
     width: 100%;
-    max-width: 1158px;
+    max-width: 320px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -213,48 +215,35 @@ p {
 /** =======================BENEFITS=SECTION============================= */
 
 .benefits {
-    padding: 120px 0;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .benefits-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
+}
+
+.benefits-list-item {
+    width: 100%;
     list-style-type: none;
 }
 
 .benefits-icon {
-    width: 16.5rem;
-    height: 7rem;
-    flex-shrink: 0;
-    border-radius: 0.25rem;
-    border: 1px solid #8E8F99;
-    background: #F4F4FD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-}
-
-.benefits-icon-position {
-
-}
-
-.benefits-icon-position:hover {
-   stroke: #4D5AE5; 
-}
-
-.benefits-list-item {
-    flex-basis: calc((100% - 3 * 24px) / 4);
-    list-style-type: none;
+    visibility: hidden;
 }
 
 .benefits-title {
     color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
+    justify-content: center;
+    display: flex;
 }
 
 .benefits-discription {
@@ -831,4 +820,75 @@ p {
     max-width: 169px;
     max-height: 56px;
     margin: 0 auto;
+}
+
+
+/* ================================================= TABLET 👇 ========================================= */
+@media screen and (min-width: 768px) {  
+.container {
+    max-width: 768px;}
+    
+.benefits {
+    padding-bottom: 24px;
+    }
+
+.benefits-list {    
+    gap: 24px;
+    }
+
+.benefits-title {
+justify-content: start;
+}
+
+.benefits-discription {
+    padding-bottom: 48px;
+    }
+
+.benefits-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+/* ================================================= DESKTOP 👇 ========================================= */
+@media screen and (min-width: 1158px) { 
+.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.benefits-list {
+    flex-wrap: nowrap;
+}
+
+.benefits-list-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+.benefits-title {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 1.2;
+}
+
+.benefits-icon {
+    visibility: visible;
+    width: 16.5rem;
+    height: 7rem;
+    flex-shrink: 0;
+    border-radius: 0.25rem;
+    border: 1px solid #8E8F99;
+    background: #F4F4FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.benefits-icon-position:hover {
+    stroke: #4D5AE5;
+}
+
 }
