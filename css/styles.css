@@ -165,7 +165,7 @@ p {
 
 .hero {
     background-color: #2E2F42;
-    padding: 188px 0;    
+    padding: 72px 0;
     text-align: center;
     display: block;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/hero-img.jpg);
@@ -176,15 +176,19 @@ p {
     margin: 0 auto;
 }
 
+@media screen and (min-device-pixel-ration: 2), (min-resolution: 2dppx) {
+    .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url();
+    }
+}
+
 .hero-title {                                                     
     color: #FFFFFF;
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    max-width: 496px;
-    margin: 0 auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
 }
 
 .hero-btn {
@@ -230,9 +234,12 @@ p {
     list-style-type: none;
 }
 
+@media (min-width: 1px) and (max-width: 1157px) {
 .benefits-icon {
-    visibility: hidden;
+    display: none;
+    }
 }
+
 
 .benefits-title {
     color: #2E2F42;
@@ -250,6 +257,8 @@ p {
     color: #434455;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 /** ==================================================================== */
@@ -824,10 +833,10 @@ p {
 
 
 /* ================================================= TABLET 👇 ========================================= */
-@media screen and (min-width: 768px) {  
+@media screen and (min-width: 768px) and (max-width:1157px) {  
 .container {
     max-width: 768px;}
-    
+
 .benefits {
     padding-bottom: 24px;
     }
@@ -840,14 +849,39 @@ p {
 justify-content: start;
 }
 
+.benefits-description-container {
+    margin-bottom: 48px;
+}
+
 .benefits-discription {
-    padding-bottom: 48px;
+    width: 328px;
     }
 
 .benefits-list-item {
     flex-basis: calc((100% - 24px) / 2);
     }
+
+.hero {
+    padding: 112px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/hero-img.jpg);
 }
+
+@media screen and (min-device-pixel-ration: 2), (min-resolution: 2dppx) {
+    .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url();
+    }
+}
+
+.hero-title {
+    font-size: 56px;
+    margin-bottom: 36px;
+}
+
+.hero-btn {
+
+}
+}
+
 
 /* ================================================= DESKTOP 👇 ========================================= */
 @media screen and (min-width: 1158px) { 
@@ -874,7 +908,6 @@ justify-content: start;
 }
 
 .benefits-icon {
-    visibility: visible;
     width: 16.5rem;
     height: 7rem;
     flex-shrink: 0;
@@ -889,6 +922,26 @@ justify-content: start;
 
 .benefits-icon-position:hover {
     stroke: #4D5AE5;
+}
+
+.hero {
+    padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/hero-img.jpg);
+}
+
+@media screen and (min-device-pixel-ration: 2),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url();
+    }
+}
+
+.hero-title {
+    margin-bottom: 48px;
+}
+
+.hero-btn {
+
 }
 
 }
