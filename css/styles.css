@@ -165,20 +165,21 @@ p {
 
 .hero {
     background-color: #2E2F42;
-    padding: 72px 0;
+    padding: 72px 16px;
     text-align: center;
-    display: block;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/hero-img.jpg);
+    display: flex;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/mobile-hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;
+    max-width: 320px;
+    height: 432px;
     margin: 0 auto;
 }
 
 @media screen and (min-device-pixel-ration: 2), (min-resolution: 2dppx) {
     .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url();
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/mobile-hero-2x.jpg);
     }
 }
 
@@ -188,7 +189,9 @@ p {
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    margin: 0 auto;
     margin-bottom: 72px;
+    max-width: 288px;
 }
 
 .hero-btn {
@@ -240,7 +243,6 @@ p {
     }
 }
 
-
 .benefits-title {
     color: #2E2F42;
     font-size: 36px;
@@ -267,12 +269,13 @@ p {
 
 .team {
     background-color: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 28px;
 }
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
 }
 
 .team-title {
@@ -284,11 +287,12 @@ p {
     line-height: 1.12;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    
 }
 
 .team-list-item {
+    max-width: 264px;
     background-color: #FFFFFF;
-    flex-basis: calc((100% - 3 * 24px) / 4);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -833,20 +837,17 @@ p {
 
 
 /* ================================================= TABLET 👇 ========================================= */
-@media screen and (min-width: 768px) and (max-width:1157px) {  
+@media screen and (min-width: 768px) {  
 .container {
     max-width: 768px;}
 
-.benefits {
-    padding-bottom: 24px;
-    }
 
 .benefits-list {    
     gap: 24px;
-    }
+}
 
 .benefits-title {
-justify-content: start;
+    justify-content: start;
 }
 
 .benefits-description-container {
@@ -855,31 +856,61 @@ justify-content: start;
 
 .benefits-discription {
     width: 328px;
-    }
+}
 
 .benefits-list-item {
     flex-basis: calc((100% - 24px) / 2);
-    }
+}
 
 .hero {
+    text-align: center;
+    height: 436px;
+    display: flex;
+    padding: 116px 36px;
+    max-width: 768px;
     padding: 112px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/hero-img.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/tablet-hero.jpg);
 }
 
 @media screen and (min-device-pixel-ration: 2), (min-resolution: 2dppx) {
     .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url();
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/tablet-hero-2x.jpg);
     }
 }
 
 .hero-title {
     font-size: 56px;
     margin-bottom: 36px;
+    max-width: 496px;
 }
 
-.hero-btn {
+.team {
+    padding: 96px 108px;
+}
+
+.team-list {
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-title {
 
 }
+
+.team-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+}
+
+@media (min-width:768px) and (max-width:1157px) {
+    .team-list-item-container {
+            margin-bottom: 40px;
+        }
+}
+
+
+
 }
 
 
@@ -891,26 +922,36 @@ justify-content: start;
     padding-right: 15px;
 }
 
-
+.benefits {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 .benefits-list {
     flex-wrap: nowrap;
 }
 
 .benefits-list-item {
-    flex-basis: calc((100% - 3 * 24px) / 4);
+    flex-basis: calc((100% - 72px) / 4);
+    max-width: 264px;
+}
+
+.benefits-discription {
+    width: 264px;
+    max-height: 72px;
+    font-weight: 400;
 }
 
 .benefits-title {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: none;
     line-height: 1.2;
+    max-width: 496px;
 }
 
 .benefits-icon {
-    width: 16.5rem;
-    height: 7rem;
-    flex-shrink: 0;
+    width: 264px;
+    height: 112px;
     border-radius: 0.25rem;
     border: 1px solid #8E8F99;
     background: #F4F4FD;
@@ -925,6 +966,8 @@ justify-content: start;
 }
 
 .hero {
+    height: 600px;
+    max-width: 1158px;
     padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/hero-img.jpg);
 }
@@ -932,7 +975,7 @@ justify-content: start;
 @media screen and (min-device-pixel-ration: 2),
 (min-resolution: 2dppx) {
     .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url();
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background/desktop-hero-2x.jpg);
     }
 }
 
@@ -940,8 +983,13 @@ justify-content: start;
     margin-bottom: 48px;
 }
 
-.hero-btn {
-
+.team {
+    padding: 120px 0;
 }
+
+.team-list-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
 
 }
