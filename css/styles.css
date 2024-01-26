@@ -74,6 +74,7 @@ p {
 .container-header {
     display: flex;
     align-items: center;
+    height: 56px;
 }
 
 .header-logo {
@@ -110,8 +111,7 @@ p {
 }
 
 .header-nav-list {
-    display: flex;
-    gap: 40px; 
+    display: none;
 }
 
 .header-nav-link {
@@ -138,8 +138,7 @@ p {
 }
 
 .header-contact-list {
-    display: flex;
-    gap: 40px;
+    display: none;
 }
 
 .header-nav-link:hover,
@@ -158,6 +157,62 @@ p {
 .header-contact-link:focus{
     color: #404BBF;
 }
+
+.header-modal-open-btn {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    display: inline-block;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/** ===========================Mobile=Menu================================ */
+/* .header-phone-menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+} */
+
+/* .header-modal-close-svg {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+.header-modal-nav {}
+
+.header-modal-nav-list {}
+
+.header-modal-nav-item {}
+
+.header-modal-nav-link {}
+
+.header-modal-contact {}
+
+.header-modal-contact-list {}
+
+.header-modal-contact-item {}
+
+.header-modal-contact-link {}
+
+/* .hero-modal-close-btn {
+    position: absolute;
+    margin-left: 0 auto;
+    cursor: pointer;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #999d9d;
+    background-color: #E7E9FC;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
 /** ==================================================================== */
 /** ===============================MAIN================================= */
@@ -923,6 +978,41 @@ p {
     }
 }
 
+.header {}
+
+.container-header {}
+
+.container {}
+
+.header-nav {}
+
+.header-logo {}
+
+.header-logo-text {}
+
+.header-nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.header-nav-item {}
+
+.header-nav-link {}
+
+.header-contact {}
+
+.header-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.header-modal-open-btn {
+    display: none;
+}
+.header-contact-item {}
+
+.header-contact-link {}
+
 }
 
 
@@ -1015,5 +1105,34 @@ p {
 .portfolio-list-item {
     width: calc((100% - 48px) / 3);
 }
+
+.header {}
+
+.container-header {}
+
+.container {}
+
+.header-nav {}
+
+.header-logo {}
+
+.header-logo-text {}
+
+.header-nav-list {}
+
+.header-nav-item {}
+
+.header-nav-link {}
+
+.header-contact {}
+
+.header-contact-list {
+    flex-direction: row;
+    gap: 40px;
+}
+
+.header-contact-item {}
+
+.header-contact-link {}
 
 }
